@@ -7,7 +7,9 @@
     "start": "node src/server.js",
     "dev": "node --watch src/server.js",
     "test": "jest --runInBand",
-    "migrate": "node src/migrate.js"
+    "migrate": "node src/migrate.js",
+    "seed": "node scripts/seed.js",
+    "loadtest": "autocannon -c 50 -d 10 'localhost:3000/leaderboard?limit=10'"
   },
   "license": "MIT",
   "private": true,
